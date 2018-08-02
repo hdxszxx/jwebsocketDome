@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>websocket</title>
+    <script src="/js/websocket.js"></script>
+</head>
+<body>
+<textarea rows="30" cols="80" id="text"></textarea>
+</br>
+<button id="button">发送</button>
+<button id="button1">关闭连接</button>
+<p id="show"></p>
+<script type="text/javascript">
+    document.getElementById("button").onclick = function () {
+        //发送数据
+        send(document.getElementById("text").value);
+    }
+    document.getElementById("button1").onclick = function () {
+       //关闭连接
+        if(confirm("是否关闭连接")){
+            close();
+        }
+    }
+</script>
+</body>
+</html>
